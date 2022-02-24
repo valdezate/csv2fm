@@ -1,0 +1,26 @@
+ContextInformation;Parent;RelationshipType;LogicalRelType;RelatedContextInformation;Property;Multiplicity;Value;SameAs;DisjointWith;ContextData;Description
+WindMill;;;AND;;;;;;;;
+MeterologicalMastMeterologicalInformation;WindMill;;AND;;;;;;;;
+WindPowerPlantMeterologicalInformation;MeterologicalMastMeterologicalInformation;;AND;;;;;;;;Meteorological information
+AirDensity;WindPowerPlantMeterologicalInformation;;;;;;;;;;
+Altitude;WindPowerPlantMeterologicalInformation;;;;;;;;;;
+Ice;WindPowerPlantMeterologicalInformation;;;;;;;;;;Thickness of ice. IEC 61400-25-2, p. 38
+WaterTemperature;WindPowerPlantMeterologicalInformation;;;;;;;;;;Temperature of water. IEC 61400-25-2, p. 38
+InertiaResponse;WindMill;;AND;;;;;;;;Inertia response information: This function harnesses the kinetic energy stored in rotational parts of wind turbines to enable an additional power for a few seconds. This control strategy is sometime referred to as “synthetic inertia” where the control system detects the frequency deviation and adjusts the power flow into the grid based on this. After the release of the energy, the turbine will operate at sub-optimal rotor speed, resulting in lower efficiency. Thus, this function is an emergency delta power and should not be confused with boost of power above 100% by temporarily exceeding design criteria. IEC 61400-25-2, p. 39
+InertiaMode;InertiaResponse;;;;InertiaResponseCtrlModeKind;;1,2,3,4;;;;Currently active inertia response control mode. IEC 61400-25-2, p. 40
+InertiaCapability;InertiaResponse;;;;;;;;;;Estimated amount of additional power (normally in percent of rated power) that can be provided upon activation of the inertia response function. IEC 61400-25-2, p. 40
+InertiaAction;InertiaResponse;;;;;;;;;;Inertia response control function command. Operating with value true activates the inertia response control function, false deactivates it. 'stVal' reflects the last accepted control value. IEC 61400-25-2, p. 40
+FrequencyLowStepoint;InertiaResponse;Requires;;FrequencyRateSetpoint;;;;;;;Low frequency threshold that initiates release of inertia response emergency delta power, usually in Hz. IEC 61400-25-2, p. 41
+FrequencyRateSetpoint;InertiaResponse;;;;;;;;;;Rate of change in frequency that initiates release of inertia response emergency delta power, usually in Hz per second. IEC 61400-25-2, p. 41
+Date;;consitsOfYear;;Year;;;;Time;;;
+Date;;consitsOfMonth;;Month;;;;;;;
+Date;;consitsOfDay;;Day;;;;;;;
+Year;;;;;;;;;;;
+Month;;;;;;;;;;;
+Day;;;;;;;;;;;
+Time;;consitsOfHour;;Hour;;;;Date;;;
+Time;;consitsOfMinute;;Minute;;;;;;;
+Time;;consitsOfSecond;;Second;;;;;;;
+Hour;;;;;;;;;;;
+Minute;;;;;;;;;;;
+Second;;;;;;;;;;;
